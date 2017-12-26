@@ -3,27 +3,42 @@ package com.test.baseutil;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.test.baselibrary.Utils.NotificationsUtils;
+import com.test.baselibrary.Utils.NumberUtils;
 
 public class NotificationTestActivity extends Activity implements View.OnClickListener {
     private Button mBtSetting;
+    private Button mBtNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notification_test);
 
-        mBtSetting = findViewById(R.id.bt_setting);
+        initView();
 
-        mBtSetting.setOnClickListener(this);
+        initListener();
     }
+
+    private void initView() {
+        mBtSetting = findViewById(R.id.bt_setting);
+        mBtNumber = findViewById(R.id.bt_number);
+    }
+
+    private void initListener() {
+        mBtSetting.setOnClickListener(this);
+        mBtNumber.setOnClickListener(this);
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -34,6 +49,10 @@ public class NotificationTestActivity extends Activity implements View.OnClickLi
                 } else {
                     Toast.makeText(this, "已经打开了", Toast.LENGTH_SHORT).show();
                 }
+                break;
+            case R.id.bt_number:
+                Log.d("123", NumberUtils.keepTwoByDecimalFormat(2345.1018238382));
+                Log.d("123", NumberUtils.keepTwoByDecimalFormat(2345.1918238382));
                 break;
         }
     }

@@ -10,4 +10,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="设置通知管理" />
+
+    <Button
+        android:id="@+id/bt_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="保留两位小数" />
 </LinearLayout>
