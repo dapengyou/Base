@@ -2,9 +2,6 @@ package com.test.baselibrary.Utils;
 
 import android.text.TextUtils;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
