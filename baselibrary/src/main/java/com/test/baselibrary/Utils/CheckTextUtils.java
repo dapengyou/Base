@@ -56,32 +56,6 @@ public class CheckTextUtils {
     }
 
     /**
-     * 判断昵称是否有有字符限制，只容许数字、英文，英文字母和数字24位
-     *
-     * @param nickName 用户昵称
-     * @return
-     */
-    public static boolean checkNickNameEnglish(String nickName) {
-        Pattern p = Pattern
-                .compile("^[0-9a-zA-Z]{1,24}$");
-        Matcher m = p.matcher(nickName);
-        return m.matches();
-    }
-
-    /**
-     * 判断昵称是否有有字符限制，中文12位
-     *
-     * @param nickName 用户昵称
-     * @return
-     */
-    public static boolean checkNickNameChinese(String nickName) {
-        Pattern p = Pattern
-                .compile("^[\\u4e00-\\u9fa5]{1,12}$");
-        Matcher m = p.matcher(nickName);
-        return m.matches();
-    }
-
-    /**
      * 返回字符长度
      *
      * @param value
