@@ -74,10 +74,10 @@ public class TestActivity extends Activity implements View.OnClickListener {
                 break;
 
             case R.id.bt_test:
-                if (checkForm()){
+                if (checkForm()) {  //验证手机号、邮箱地址、密码输入的是否正确
                     show("unbelievable");
                 }
-                    break;
+                break;
 
         }
     }
