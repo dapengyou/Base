@@ -1,7 +1,9 @@
 package com.test.baselibrary.base;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -56,20 +58,42 @@ public abstract class TitleActivity extends BaseActivity {
      */
     protected abstract int getContentResId();
 
+
     /**
-     * 设置左边图标
+     * 设置标题栏左文本图标
      *
-     * @param iconId
+     * @param drawableId
      */
-    private void setLeftIcon(int iconId) {
+    public void setLeftIcon(@DrawableRes int drawableId) {
+        setIcon(mLeftTv, drawableId, 1.0);
     }
 
     /**
-     * 设置右边图标
+     * 设置标题栏右文本图标
+     *
+     * @param drawableId
+     */
+    @SuppressWarnings("deprecation")
+    public void setRightIcon(@DrawableRes int drawableId) {
+        setIcon(mRightTv, drawableId, 1.0);
+    }
+
+    /**
+     * 设置左右边图标
      *
      * @param iconId
      */
-    private void setRightIcon(int iconId) {
+    private void setIcon(TextView mView, int iconId, double scale) {
+        Drawable drawable = getResources().getDrawable(iconId);
+        if (drawable != null) {
+            //设置位置
+            drawable.setBounds(0, 0, (int) (drawable.getMinimumWidth() * scale), (int) (drawable.getMinimumHeight() * scale));
+
+            mView.setCompoundDrawables(drawable, null, null, null);
+            mView.setVisibility(View.VISIBLE);
+            mView.setOnClickListener(this);
+
+        }
     }
 
     @Override

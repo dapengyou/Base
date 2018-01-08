@@ -23,7 +23,7 @@ public class TestTitleActivity  extends TitleActivity{
 
     @Override
     protected void initData(Intent intent, Bundle savedInstanceState) {
-        super.initData(intent, savedInstanceState);
+
     }
 
     @Override
