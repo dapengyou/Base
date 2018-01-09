@@ -62,20 +62,28 @@ public abstract class TitleActivity extends BaseActivity {
     /**
      * 设置标题栏左文本图标
      *
-     * @param drawableId
+     * @param drawableId 传0 隐藏图标
      */
     public void setLeftIcon(@DrawableRes int drawableId) {
-        setIcon(mLeftTv, drawableId, 1.0);
+        if (drawableId == 0) {
+            mLeftTv.setVisibility(View.GONE);
+        } else {
+            setIcon(mLeftTv, drawableId, 1.0);
+        }
     }
 
     /**
      * 设置标题栏右文本图标
      *
-     * @param drawableId
+     * @param drawableId 传0 隐藏图标
      */
     @SuppressWarnings("deprecation")
     public void setRightIcon(@DrawableRes int drawableId) {
-        setIcon(mRightTv, drawableId, 1.0);
+        if (drawableId == 0) {
+            mRightTv.setVisibility(View.GONE);
+        } else {
+            setIcon(mRightTv, drawableId, 1.0);
+        }
     }
 
     /**
@@ -97,7 +105,7 @@ public abstract class TitleActivity extends BaseActivity {
     }
 
     @Override
-    protected void onViewClick(View v) {
+    public void onClick(View v) {
         if (v.getId() == R.id.title_left_tv) {
             onLeftClick(v);
         } else if (v.getId() == R.id.title_right_tv) {

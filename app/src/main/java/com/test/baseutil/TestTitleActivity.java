@@ -2,6 +2,7 @@ package com.test.baseutil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.test.baselibrary.base.TitleActivity;
 
@@ -28,6 +29,11 @@ public class TestTitleActivity  extends TitleActivity{
 
     @Override
     protected void initListener() {
+
+    }
+
+    @Override
+    protected void onViewClick(View v) {
 
     }
 }

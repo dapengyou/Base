@@ -17,8 +17,9 @@ import com.test.baselibrary.Utils.CheckTextUtils;
 import com.test.baselibrary.Utils.CountDownUtil;
 import com.test.baselibrary.Utils.NotificationsUtils;
 import com.test.baselibrary.Utils.NumberUtils;
+import com.test.baselibrary.base.TitleActivity;
 
-public class TestActivity extends Activity implements View.OnClickListener {
+public class TestActivity extends TitleActivity {
     private Button mBtSetting;
     private Button mBtNumber;
     private Button mBtTest;
@@ -34,16 +35,27 @@ public class TestActivity extends Activity implements View.OnClickListener {
     private String mEmail;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.notification_test);
-
-        initView();
-
-        initListener();
+    protected int getContentResId() {
+        return R.layout.notification_test;
     }
 
-    private void initView() {
+    @Override
+    protected void initData(Intent intent, Bundle savedInstanceState) {
+//        setLeftText("嗨");
+        setTitleText("title");
+//        setRightText("设置");
+        setRightIcon(R.mipmap.back_white);
+        setLeftIcon(0); //传0 隐藏图标
+    }
+
+    @Override
+    protected void onRightClick(View rigthTv) {
+        show("右边");
+    }
+
+    @Override
+    protected void initView(Bundle savedInstanceState) {
+        super.initView(savedInstanceState);
         mBtSetting = findViewById(R.id.bt_setting);
         mBtNumber = findViewById(R.id.bt_number);
         mBtTest = findViewById(R.id.bt_test);
@@ -55,17 +67,17 @@ public class TestActivity extends Activity implements View.OnClickListener {
         mTvCountDown = findViewById(R.id.tv_countDown);
     }
 
-    private void initListener() {
+    @Override
+    protected void initListener() {
         mBtSetting.setOnClickListener(this);
         mBtNumber.setOnClickListener(this);
         mBtTest.setOnClickListener(this);
         mTvCountDown.setOnClickListener(this);
     }
 
-
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
+    protected void onViewClick(View v) {
+        switch (v.getId()) {
             case R.id.bt_setting:
                 if (!NotificationsUtils.isNotificationEnabled(this)) {
                     setting();
@@ -86,7 +98,7 @@ public class TestActivity extends Activity implements View.OnClickListener {
             case R.id.tv_countDown:
                 show("点击了");
 //                CountDownUtil countDown = new CountDownUtil(mTvCountDown);
-                CountDownUtil countDown = new CountDownUtil(mTvCountDown,"%ds后重新发送");
+                CountDownUtil countDown = new CountDownUtil(mTvCountDown, "%ds后重新发送");
 //                CountDownUtil countDown = new CountDownUtil(mTvCountDown,180,"%ds后重新发送");
                 countDown.start();
                 break;
