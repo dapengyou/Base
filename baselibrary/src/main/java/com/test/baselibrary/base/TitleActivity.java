@@ -2,6 +2,7 @@ package com.test.baselibrary.base;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
@@ -131,6 +132,20 @@ public abstract class TitleActivity extends BaseActivity {
      */
     protected void onRightClick(View rigthTv) {
         //应用逻辑内容
+    }
+
+
+    protected void setTitleBarColor(int[] colors) {
+        int titleColors[] = colors;
+        GradientDrawable bg = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,colors);
+//        GradientDrawable bg = new GradientDrawable(GradientDrawable.RECTANGLE, titleColors);
+        //根据SDK判断
+        int sdk = android.os.Build.VERSION.SDK_INT;
+        if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            mTitleBar.setBackgroundDrawable(bg);
+        } else {
+            mTitleBar.setBackground(bg);
+        }
     }
 
     /**

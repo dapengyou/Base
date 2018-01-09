@@ -2,6 +2,7 @@ package com.test.baseutil;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -44,8 +45,14 @@ public class TestActivity extends TitleActivity {
 //        setLeftText("嗨");
         setTitleText("title");
 //        setRightText("设置");
-        setRightIcon(R.mipmap.back_white);
+//        setRightIcon(R.mipmap.back_white);
         setLeftIcon(0); //传0 隐藏图标
+
+        //设置Titlebar 渐变色
+//        int colors[] = {Color.WHITE,Color.GREEN};
+//        int colors[] = {Color.parseColor("#000000"), Color.parseColor("#f1f9b1")};
+        int colors[] = {0xff255779, 0xff3e7492};
+        setTitleBarColor(colors);
     }
 
     @Override
@@ -145,10 +152,6 @@ public class TestActivity extends TitleActivity {
             return false;
         }
         return true;
-    }
-
-    private void show(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     /**
