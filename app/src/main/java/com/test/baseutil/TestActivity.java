@@ -46,13 +46,13 @@ public class TestActivity extends TitleActivity {
         setTitleText("title");
 //        setRightText("设置");
 //        setRightIcon(R.mipmap.back_white);
-        setLeftIcon(0); //传0 隐藏图标
+//        setLeftIcon(0); //传0 隐藏图标
 
         //设置Titlebar 渐变色
 //        int colors[] = {Color.WHITE,Color.GREEN};
 //        int colors[] = {Color.parseColor("#000000"), Color.parseColor("#f1f9b1")};
-        int colors[] = {0xff255779, 0xff3e7492};
-        setTitleBarColor(colors);
+//        int colors[] = {0xff255779, 0xff3e7492};
+//        setTitleBarColor(colors);
     }
 
     @Override
