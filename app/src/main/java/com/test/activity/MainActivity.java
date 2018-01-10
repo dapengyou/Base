@@ -1,7 +1,9 @@
-package com.test.baseutil;
+package com.test.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.test.baseutil.R;
 
 public class MainActivity extends AppCompatActivity {
 

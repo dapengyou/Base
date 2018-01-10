@@ -1,4 +1,4 @@
-package com.test.baseutil;
+package com.test.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,6 +19,7 @@ import com.test.baselibrary.Utils.CountDownUtil;
 import com.test.baselibrary.Utils.NotificationsUtils;
 import com.test.baselibrary.Utils.NumberUtils;
 import com.test.baselibrary.base.TitleActivity;
+import com.test.baseutil.R;
 
 public class TestActivity extends TitleActivity {
     private Button mBtSetting;

@@ -2,6 +2,7 @@ package com.test.baselibrary.base;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,7 +19,6 @@ import android.widget.Toast;
 
 public abstract class BaseFragment extends Fragment implements View.OnClickListener {
 
-    private Activity mActivity;
     private View mRootView;
 
     @Nullable
@@ -112,9 +112,9 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      */
     protected void show(String message, boolean isLong) {
         if (isLong) {
-            Toast.makeText(mActivity, message, Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(mActivity, message, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
         }
     }
 }
