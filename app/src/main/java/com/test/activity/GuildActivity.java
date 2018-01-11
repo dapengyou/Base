@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.test.adapter.CardSlideTransformer;
 import com.test.adapter.GuildAdapter;
 import com.test.baselibrary.base.BaseActivity;
 import com.test.baseutil.R;
@@ -54,22 +55,25 @@ public class GuildActivity extends BaseActivity implements ViewPager.OnPageChang
         Bundle bundle1 = new Bundle();
         bundle1.putInt(GuildFragment.GUILDFRAGMENT, 1);
         guildFragment1.setArguments(bundle1);
-        mList.add(guildFragment1);
 
         GuildFragment guildFragment2 = new GuildFragment();
         Bundle bundle2 = new Bundle();
         bundle2.putInt(GuildFragment.GUILDFRAGMENT, 2);
         guildFragment2.setArguments(bundle2);
-        mList.add(guildFragment2);
+
 
         GuildFragment guildFragment3 = new GuildFragment();
         Bundle bundle3 = new Bundle();
         bundle3.putInt(GuildFragment.GUILDFRAGMENT, 3);
         guildFragment3.setArguments(bundle3);
+
+        mList.add(guildFragment1);
+        mList.add(guildFragment2);
         mList.add(guildFragment3);
 
         mViewPager.setAdapter(new GuildAdapter(getSupportFragmentManager(), mList));
         mViewPager.addOnPageChangeListener(this);
+//        mViewPager.setPageTransformer(true, new CardSlideTransformer());
     }
 
     @Override
