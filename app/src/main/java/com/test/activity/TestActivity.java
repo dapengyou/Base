@@ -1,6 +1,5 @@
 package com.test.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -14,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bigkoo.pickerview.OptionsPickerView;
+import com.test.baselibrary.MyApplication;
 import com.test.baselibrary.Utils.CheckTextUtils;
 import com.test.baselibrary.Utils.CountDownUtil;
 import com.test.baselibrary.Utils.NotificationsUtils;
@@ -31,10 +32,15 @@ public class TestActivity extends TitleActivity {
     private EditText mEtEmail;
 
     private TextView mTvCountDown;
+    private TextView mTvAddress;
 
     private String mPhone;
     private String mPassword;
     private String mEmail;
+
+    private String mProvince;
+    private String mCity;
+    private String mDistrict;
 
     @Override
     protected int getContentResId() {
@@ -73,6 +79,7 @@ public class TestActivity extends TitleActivity {
         mEtPhone = findViewById(R.id.et_phone);
 
         mTvCountDown = findViewById(R.id.tv_countDown);
+        mTvAddress = findViewById(R.id.tv_address);
     }
 
     @Override
@@ -81,6 +88,7 @@ public class TestActivity extends TitleActivity {
         mBtNumber.setOnClickListener(this);
         mBtTest.setOnClickListener(this);
         mTvCountDown.setOnClickListener(this);
+        mTvAddress.setOnClickListener(this);
     }
 
     @Override
@@ -110,8 +118,41 @@ public class TestActivity extends TitleActivity {
 //                CountDownUtil countDown = new CountDownUtil(mTvCountDown,180,"%ds后重新发送");
                 countDown.start();
                 break;
-
+            case R.id.tv_address:
+                showAddressDialog();
+                break;
         }
+    }
+
+    /**
+     * 弹出选择器
+     */
+    private void showAddressDialog() {
+        final OptionsPickerView pvOptions = new OptionsPickerView.Builder(this, new OptionsPickerView.OnOptionsSelectListener() {
+            @Override
+            public void onOptionsSelect(int options1, int options2, int options3, View v) {
+                //返回的分别是三个级别的选中位置
+                mProvince = MyApplication.provinces.get(options1).getPickerViewText();
+                mCity = MyApplication.citys.get(options1).get(options2);
+                mDistrict = MyApplication.districts.get(options1).get(options2).get(options3);
+                mTvAddress.setText(mProvince + mCity + mDistrict);
+
+            }
+        })
+                .setDividerColor(Color.WHITE)//分割线的颜色
+                .setTitleBgColor(Color.WHITE)
+                .setTextColorCenter(Color.BLACK) //设置选中项文字颜色
+                .setContentTextSize(17)
+                .setOutSideCancelable(false)// default is true
+                .setTitleText("地区选择")
+                .setTitleColor(getResources().getColor(R.color.blue))
+                .setCancelColor(getResources().getColor(R.color.blue))
+                .setTitleSize(20)
+                .setSubmitColor(getResources().getColor(R.color.blue))
+                .build();
+
+        pvOptions.setPicker(MyApplication.provinces, MyApplication.citys, MyApplication.districts);//二级选择器
+        pvOptions.show();
     }
 
     /**
