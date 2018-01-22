@@ -26,6 +26,7 @@ public class TestActivity extends TitleActivity {
     private Button mBtSetting;
     private Button mBtNumber;
     private Button mBtTest;
+    private Button mBtRefresh;
 
     private EditText mEtPassword;
     private EditText mEtPhone;
@@ -80,6 +81,7 @@ public class TestActivity extends TitleActivity {
 
         mTvCountDown = findViewById(R.id.tv_countDown);
         mTvAddress = findViewById(R.id.tv_address);
+        mBtRefresh = findViewById(R.id.bt_refresh);
     }
 
     @Override
@@ -89,6 +91,7 @@ public class TestActivity extends TitleActivity {
         mBtTest.setOnClickListener(this);
         mTvCountDown.setOnClickListener(this);
         mTvAddress.setOnClickListener(this);
+        mBtRefresh.setOnClickListener(this);
     }
 
     @Override
@@ -120,6 +123,9 @@ public class TestActivity extends TitleActivity {
                 break;
             case R.id.tv_address:
                 showAddressDialog();
+                break;
+            case R.id.bt_refresh:
+                startActivity(new Intent(this, RefreshActivity.class));
                 break;
         }
     }
