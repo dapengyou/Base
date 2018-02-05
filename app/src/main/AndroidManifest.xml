@@ -10,19 +10,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.test.activity.MainActivity"></activity>
-        <activity android:name="com.test.activity.TestActivity">
+        <activity android:name="com.test.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.test.activity.TestActivity"></activity>
         <activity
             android:name="com.test.activity.GuildActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.activity.RefreshActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.test.activity.FlexboxActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 
