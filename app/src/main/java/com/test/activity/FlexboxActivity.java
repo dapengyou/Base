@@ -5,12 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.callback.ItemDragAndSwipeCallback;
+import com.chad.library.adapter.base.listener.OnItemDragListener;
 import com.google.android.flexbox.AlignItems;
 import com.google.android.flexbox.AlignSelf;
 import com.google.android.flexbox.FlexDirection;
@@ -80,6 +85,45 @@ public class FlexboxActivity extends TitleActivity {
 
         mFlexboxAdapter = new FlexboxAdapter(MockData.getFlexBox(mList));
         mRecyclerView.setAdapter(mFlexboxAdapter);
+
+        //点击后显示点击内容
+        mFlexboxAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Toast.makeText(view.getContext(), "You click text : " + mList.get(position), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        //adapter设置动画（渐显）
+        mFlexboxAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
+
+        ItemDragAndSwipeCallback itemDragAndSwipeCallback = new ItemDragAndSwipeCallback(mFlexboxAdapter);
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(itemDragAndSwipeCallback);
+        itemTouchHelper.attachToRecyclerView(mRecyclerView);
+
+
+        OnItemDragListener onItemDragListener = new OnItemDragListener() {
+            @Override
+            public void onItemDragStart(RecyclerView.ViewHolder viewHolder, int pos) {
+
+            }
+
+            @Override
+            public void onItemDragMoving(RecyclerView.ViewHolder source, int from, RecyclerView.ViewHolder target, int to) {
+
+            }
+
+            @Override
+            public void onItemDragEnd(RecyclerView.ViewHolder viewHolder, int pos) {
+                Toast.makeText(FlexboxActivity.this, "You drag text : " + mList.get(pos), Toast.LENGTH_SHORT).show();
+
+            }
+        };
+
+        // 开启拖拽
+        mFlexboxAdapter.enableDragItem(itemTouchHelper, R.id.tv_flexbox, true);
+        mFlexboxAdapter.setOnItemDragListener(onItemDragListener);
+
     }
 
     @Override
