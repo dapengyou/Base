@@ -67,24 +67,6 @@ public class FlexboxActivity extends TitleActivity {
 
     @Override
     protected void initData(Intent intent, Bundle savedInstanceState) {
-//        for (int i = 0; i < mList.size(); i++) {
-//            // 通过代码向FlexboxLayout添加View
-//            TextView textView = new TextView(this);
-//            textView.setBackground(getResources().getDrawable(R.drawable.bg_flexbox));
-//            textView.setText(mList.get(i));
-//            textView.setGravity(Gravity.CENTER);
-//            textView.setPadding(30, 10, 30, 10);
-//            mFlexboxLayout.addView(textView);
-//
-//            //通过FlexboxLayout.LayoutParams 设置子元素支持的属性
-//            ViewGroup.LayoutParams lp = textView.getLayoutParams();
-//            if (lp instanceof FlexboxLayoutManager.LayoutParams) {
-//                FlexboxLayoutManager.LayoutParams flexboxLp = (FlexboxLayoutManager.LayoutParams) lp;
-//                flexboxLp.setFlexGrow(1.0f);
-//                flexboxLp.setAlignSelf(AlignSelf.FLEX_END);
-//                flexboxLp.setMargins(20, 10, 20, 10);
-//            }
-//        }
         FlexboxLayoutManager manager = new FlexboxLayoutManager(getApplicationContext());
 
         //设置主轴排列方式
@@ -98,22 +80,6 @@ public class FlexboxActivity extends TitleActivity {
 
         mFlexboxAdapter = new FlexboxAdapter(MockData.getFlexBox(mList));
         mRecyclerView.setAdapter(mFlexboxAdapter);
-
-
-//        ViewAdapter viewAdapter = new ViewAdapter(MockData.getFlexBox(mList));
-//        mRecyclerView.setAdapter(viewAdapter);
-    }
-    private List<FlexboxBean> initViewItemDtoList()
-    {
-        List<FlexboxBean> ret = new ArrayList<FlexboxBean>();
-
-        for(int i=0;i < mList.size(); i++)
-        {
-            FlexboxBean itemDto = new FlexboxBean();
-            itemDto.setText(mList.get(i));
-            ret.add(itemDto);
-        }
-        return ret;
     }
 
     @Override
