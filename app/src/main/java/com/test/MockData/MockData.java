@@ -1,5 +1,7 @@
 package com.test.MockData;
 
+import com.test.adapter.FlexboxAdapter;
+import com.test.bean.FlexboxBean;
 import com.test.bean.HomeBean;
 
 import java.text.SimpleDateFormat;
@@ -17,6 +19,16 @@ public class MockData {
             HomeBean homeBean = new HomeBean();
             homeBean.setNumber("list " + (i + 1));
             datas.add(homeBean);
+        }
+        return datas;
+    }
+
+    public static List<FlexboxBean> getFlexBox(List<String> list) {
+        List<FlexboxBean> datas = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            FlexboxBean flexboxBean = new FlexboxBean();
+            flexboxBean.setText(list.get(i));
+            datas.add(flexboxBean);
         }
         return datas;
     }

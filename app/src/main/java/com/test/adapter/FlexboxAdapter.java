@@ -1,7 +1,9 @@
 package com.test.adapter;
 
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -23,9 +25,9 @@ public class FlexboxAdapter extends BaseQuickAdapter<FlexboxBean, BaseViewHolder
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, FlexboxBean item) {
-//        helper.setText(R.id.tv_flexbox, item.getText());
-        TextView mTextView =  helper.getView(R.id.tv_flexbox);
+    protected void convert(BaseViewHolder helper, final FlexboxBean item) {
+        TextView mTextView = helper.getConvertView().findViewById(R.id.tv_flexbox);
+        helper.setText(R.id.tv_flexbox,item.getText());
 
         ViewGroup.LayoutParams lp = mTextView.getLayoutParams();
         if (lp instanceof FlexboxLayoutManager.LayoutParams) {
@@ -34,5 +36,11 @@ public class FlexboxAdapter extends BaseQuickAdapter<FlexboxBean, BaseViewHolder
             flexboxLp.setFlexGrow(1.0f);
         }
 
+        mTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "You click text : " + item.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

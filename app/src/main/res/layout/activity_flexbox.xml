@@ -27,26 +27,33 @@
             android:text="按住拖动调整排序"
             android:textColor="@color/text_gray" />
 
-        <com.google.android.flexbox.FlexboxLayout
-            android:id="@+id/fl_flexbox"
+        <!--<com.google.android.flexbox.FlexboxLayout-->
+        <!--android:id="@+id/fl_flexbox"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tv_tip"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--app:alignItems="stretch"-->
+        <!--app:flexDirection="row"-->
+        <!--app:flexWrap="wrap">-->
+
+        <!--</com.google.android.flexbox.FlexboxLayout>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recycleView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/tv_tip"
-            android:layout_marginTop="10dp"
-            app:alignItems="stretch"
-            app:flexDirection="row"
-            app:flexWrap="wrap">
+            android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
 
-        </com.google.android.flexbox.FlexboxLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/fl_flexbox"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="按住拖动调整排序"
-            android:textColor="@color/text_gray" />
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_below="@+id/fl_flexbox"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="按住拖动调整排序"-->
+        <!--android:textColor="@color/text_gray" />-->
     </RelativeLayout>
 </ScrollView>
