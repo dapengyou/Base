@@ -1,6 +1,7 @@
 package com.test.activity;
 
 import android.content.Intent;
+import android.graphics.PixelFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -9,6 +10,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +39,7 @@ public class FlexboxActivity extends TitleActivity {
     private FlexboxLayout mFlexboxLayout;
     private RecyclerView mRecyclerView;
     private FlexboxAdapter mFlexboxAdapter;
+    private View mView;
 
     private ArrayList<String> mList = new ArrayList<String>() {{
         add("要闻");
