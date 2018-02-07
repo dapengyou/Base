@@ -6,7 +6,7 @@ import android.widget.QuickContactBadge;
 
 import com.test.baseutil.R;
 
-public class Test2Activity extends AppCompatActivity {
+public class QuickContactBadgeActivity extends AppCompatActivity {
     private QuickContactBadge badge;
 
     @Override

@@ -29,7 +29,8 @@
         <activity
             android:name="com.test.activity.FlexboxActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.test.activity.Test2Activity"></activity>
+        <activity android:name="com.test.activity.QuickContactBadgeActivity" />
+        <activity android:name="com.test.activity.BottomSheetDialogActivity"></activity>
     </application>
 
 </manifest>

@@ -28,6 +28,7 @@ public class TestActivity extends TitleActivity {
     private Button mBtTest;
     private Button mBtRefresh;
     private Button mBtTest2;
+    private Button mBottomSheetDialog;
 
     private EditText mEtPassword;
     private EditText mEtPhone;
@@ -84,6 +85,7 @@ public class TestActivity extends TitleActivity {
         mTvAddress = findViewById(R.id.tv_address);
         mBtRefresh = findViewById(R.id.bt_refresh);
         mBtTest2 = findViewById(R.id.bt_quickContactBadge);
+        mBottomSheetDialog = findViewById(R.id.bt_bottomSheetDialog);
     }
 
     @Override
@@ -95,6 +97,7 @@ public class TestActivity extends TitleActivity {
         mTvAddress.setOnClickListener(this);
         mBtRefresh.setOnClickListener(this);
         mBtTest2.setOnClickListener(this);
+        mBottomSheetDialog.setOnClickListener(this);
     }
 
     @Override
@@ -131,7 +134,10 @@ public class TestActivity extends TitleActivity {
                 startActivity(new Intent(this, RefreshActivity.class));
                 break;
             case R.id.bt_quickContactBadge:
-                startActivity(new Intent(this, Test2Activity.class));
+                startActivity(new Intent(this, QuickContactBadgeActivity.class));
+                break;
+            case R.id.bt_bottomSheetDialog:
+                startActivity(new Intent(this, BottomSheetDialogActivity.class));
                 break;
 
         }
