@@ -30,7 +30,8 @@
             android:name="com.test.activity.FlexboxActivity"
             android:screenOrientation="portrait" />
         <activity android:name="com.test.activity.QuickContactBadgeActivity" />
-        <activity android:name="com.test.activity.BottomSheetDialogActivity"></activity>
+        <activity android:name="com.test.activity.BottomSheetDialogActivity" />
+        <activity android:name="com.test.activity.CollaspingLayoutActivity"></activity>
     </application>
 
 </manifest>
