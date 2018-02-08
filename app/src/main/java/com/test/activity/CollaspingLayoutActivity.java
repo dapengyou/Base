@@ -45,7 +45,7 @@ public class CollaspingLayoutActivity extends BaseActivity {
     protected void initData(Intent intent, Bundle savedInstanceState) {
         mCollapsingToolbarLayout.setTitle("测试一号");
         mCollapsingToolbarLayout.setCollapsedTitleGravity(Gravity.CENTER);//设置收缩后标题的位置
-        mCollapsingToolbarLayout.setExpandedTitleGravity(Gravity.CENTER|Gravity.TOP);//设置展开后标题的位置
+        mCollapsingToolbarLayout.setExpandedTitleGravity(Gravity.CENTER|Gravity.BOTTOM);//设置展开后标题的位置
         mCollapsingToolbarLayout.setExpandedTitleTextColor(ColorStateList.valueOf(Color.BLACK));
 
         //设置布局管理器
