@@ -1,4 +1,4 @@
-package com.test.activity;
+package com.test.activity.MaterialDesign;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;

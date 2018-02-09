@@ -1,4 +1,4 @@
-package com.test.activity;
+package com.test.activity.BaseTest;
 
 import android.content.Intent;
 import android.graphics.Color;

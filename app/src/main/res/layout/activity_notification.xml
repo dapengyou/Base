@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.test.activity.MaterialDesign.BottomSheetDialogActivity">
+    tools:context="com.test.activity.MaterialDesign.CommonNotificationActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_common"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="bottomSheetDialog" />
+        android:text="普通通知" />
 </LinearLayout>

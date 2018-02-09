@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/scrollview"
-    tools:context="com.test.activity.FlexboxActivity">
+    tools:context="com.test.activity.FangWrite.FlexboxActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

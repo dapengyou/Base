@@ -1,4 +1,4 @@
-package com.test.activity;
+package com.test.activity.BaseTest;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.test.adapter.CardSlideTransformer;
 import com.test.adapter.GuildAdapter;
 import com.test.baselibrary.base.BaseActivity;
 import com.test.baseutil.R;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.test.activity.DesignActivity">
+    tools:context="com.test.activity.MaterialDesign.DesignActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,5 +34,27 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="collapsing展开折叠" />
+
+        <Button
+            android:id="@+id/bt_commonNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="普通通知" />
+        <Button
+            android:id="@+id/bt_foldNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="折叠通知" />
+        <Button
+            android:id="@+id/bt_hangNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="悬挂通知" />
     </LinearLayout>
 </ScrollView>

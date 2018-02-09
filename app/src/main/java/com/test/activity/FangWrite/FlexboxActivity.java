@@ -1,25 +1,16 @@
-package com.test.activity;
+package com.test.activity.FangWrite;
 
 import android.content.Intent;
-import android.graphics.PixelFormat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.webkit.WebView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.callback.ItemDragAndSwipeCallback;
 import com.chad.library.adapter.base.listener.OnItemDragListener;
-import com.google.android.flexbox.AlignItems;
-import com.google.android.flexbox.AlignSelf;
 import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayout;
@@ -27,13 +18,10 @@ import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
 import com.test.MockData.MockData;
 import com.test.adapter.FlexboxAdapter;
-import com.test.adapter.ViewAdapter;
 import com.test.baselibrary.base.TitleActivity;
 import com.test.baseutil.R;
-import com.test.bean.FlexboxBean;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class FlexboxActivity extends TitleActivity {
     private FlexboxLayout mFlexboxLayout;

@@ -19,20 +19,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.test.activity.TestActivity" />
+        <activity android:name="com.test.activity.BaseTest.TestActivity" />
         <activity
-            android:name="com.test.activity.GuildActivity"
+            android:name="com.test.activity.BaseTest.GuildActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.test.activity.RefreshActivity"
+            android:name="com.test.activity.BaseTest.RefreshActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.test.activity.FlexboxActivity"
+            android:name="com.test.activity.FangWrite.FlexboxActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.test.activity.QuickContactBadgeActivity" />
-        <activity android:name="com.test.activity.BottomSheetDialogActivity" />
-        <activity android:name="com.test.activity.CollaspingLayoutActivity" />
-        <activity android:name="com.test.activity.DesignActivity"></activity>
+        <activity android:name="com.test.activity.MaterialDesign.QuickContactBadgeActivity" />
+        <activity android:name="com.test.activity.MaterialDesign.BottomSheetDialogActivity" />
+        <activity android:name="com.test.activity.MaterialDesign.CollaspingLayoutActivity" />
+        <activity android:name="com.test.activity.MaterialDesign.DesignActivity" />
+        <activity android:name="com.test.activity.MaterialDesign.CommonNotificationActivity" />
+        <activity android:name="com.test.activity.MaterialDesign.FoldNotificationActivity" />
+        <activity android:name="com.test.activity.MaterialDesign.HangNotificationActivity"></activity>
     </application>
 
 </manifest>

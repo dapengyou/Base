@@ -1,4 +1,4 @@
-package com.test.activity;
+package com.test.activity.MaterialDesign;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

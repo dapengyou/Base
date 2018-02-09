@@ -1,4 +1,4 @@
-package com.test.activity;
+package com.test.activity.BaseTest;
 
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
