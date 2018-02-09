@@ -79,26 +79,5 @@
             android:layout_marginTop="10dp"
             android:text="刷新" />
 
-        <Button
-            android:id="@+id/bt_quickContactBadge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="QuickContactBadge" />
-        <Button
-            android:id="@+id/bt_bottomSheetDialog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="BottomSheetDialog" />
-        <Button
-            android:id="@+id/bt_collapsing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="collapsing展开折叠" />
     </LinearLayout>
 </ScrollView>

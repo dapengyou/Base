@@ -27,9 +27,7 @@ public class TestActivity extends TitleActivity {
     private Button mBtNumber;
     private Button mBtTest;
     private Button mBtRefresh;
-    private Button mBtTest2;
-    private Button mBottomSheetDialog;
-    private Button mBtCollapsing;
+
 
     private EditText mEtPassword;
     private EditText mEtPhone;
@@ -85,9 +83,7 @@ public class TestActivity extends TitleActivity {
         mTvCountDown = findViewById(R.id.tv_countDown);
         mTvAddress = findViewById(R.id.tv_address);
         mBtRefresh = findViewById(R.id.bt_refresh);
-        mBtTest2 = findViewById(R.id.bt_quickContactBadge);
-        mBottomSheetDialog = findViewById(R.id.bt_bottomSheetDialog);
-        mBtCollapsing = findViewById(R.id.bt_collapsing);
+
     }
 
     @Override
@@ -98,9 +94,7 @@ public class TestActivity extends TitleActivity {
         mTvCountDown.setOnClickListener(this);
         mTvAddress.setOnClickListener(this);
         mBtRefresh.setOnClickListener(this);
-        mBtTest2.setOnClickListener(this);
-        mBottomSheetDialog.setOnClickListener(this);
-        mBtCollapsing.setOnClickListener(this);
+
     }
 
     @Override
@@ -136,15 +130,7 @@ public class TestActivity extends TitleActivity {
             case R.id.bt_refresh:
                 startActivity(new Intent(this, RefreshActivity.class));
                 break;
-            case R.id.bt_quickContactBadge:
-                startActivity(new Intent(this, QuickContactBadgeActivity.class));
-                break;
-            case R.id.bt_bottomSheetDialog:
-                startActivity(new Intent(this, BottomSheetDialogActivity.class));
-                break;
-            case R.id.bt_collapsing:
-                startActivity(new Intent(this, CollaspingLayoutActivity.class));
-                break;
+
         }
     }
 

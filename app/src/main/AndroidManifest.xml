@@ -31,7 +31,8 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.test.activity.QuickContactBadgeActivity" />
         <activity android:name="com.test.activity.BottomSheetDialogActivity" />
-        <activity android:name="com.test.activity.CollaspingLayoutActivity"></activity>
+        <activity android:name="com.test.activity.CollaspingLayoutActivity" />
+        <activity android:name="com.test.activity.DesignActivity"></activity>
     </application>
 
 </manifest>

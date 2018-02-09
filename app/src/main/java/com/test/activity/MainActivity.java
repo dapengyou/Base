@@ -11,6 +11,7 @@ import com.test.baseutil.R;
 public class MainActivity extends BaseActivity {
     private Button mBtTest;
     private Button mBtFtenxun;
+    private Button mBtDesign;
 
     @Override
     protected int getLayoutId() {
@@ -21,6 +22,7 @@ public class MainActivity extends BaseActivity {
     protected void initView(Bundle savedInstanceState) {
         mBtTest = findViewById(R.id.bt_test);
         mBtFtenxun = findViewById(R.id.bt_ftenxun);
+        mBtDesign = findViewById(R.id.bt_design);
     }
 
     @Override
@@ -32,6 +34,7 @@ public class MainActivity extends BaseActivity {
     protected void initListener() {
         mBtFtenxun.setOnClickListener(this);
         mBtTest.setOnClickListener(this);
+        mBtDesign.setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +45,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.bt_ftenxun:
                 startActivity(new Intent(this, FlexboxActivity.class));
+                break;
+            case R.id.bt_design:
+                startActivity(new Intent(this, DesignActivity.class));
                 break;
         }
     }
