@@ -25,5 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="仿照腾讯频道定制" />
+    µ
+    <Button
+        android:id="@+id/bt_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="分享" />
 
 </LinearLayout>

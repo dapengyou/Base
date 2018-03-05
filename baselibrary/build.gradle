@@ -25,8 +25,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -37,8 +35,10 @@ dependencies {
     compile 'com.android.support:multidex:1.0.1'
     api 'com.android.support:recyclerview-v7:26+'
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
-    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+    //没有使用特殊Header，可以不加这行
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.0'
-    api   'com.android.support:design:26.1.0'
-
+    api 'com.android.support:design:26.1.0'
+    implementation files('/Users/ztt/Downloads/谷歌下载内容/umeng_sdk_android_5a9baaf2f43e480d7200010e/share/platforms/微信完整版/libs/SocialSDK_WeiXin_Full.jar')
 }

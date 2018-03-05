@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BaseUtil</string>
+    <string name="share_weixin">微信</string>
+    <string name="share_weixin_moment">朋友圈</string>
+    <string name="share_qq">QQ</string>
+    <string name="share_qzone">QQ空间</string>
 </resources>

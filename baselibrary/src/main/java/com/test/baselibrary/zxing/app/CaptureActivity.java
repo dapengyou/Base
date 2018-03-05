@@ -180,6 +180,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
     /**
      * 闪光灯点击事件
+     * TODO 自己书写
      */
     private OnClickListener click = new OnClickListener() {
 

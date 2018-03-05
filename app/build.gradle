@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -30,4 +30,5 @@ dependencies {
     implementation 'com.contrarywind:Android-PickerView:3.2.4'
     implementation 'com.google.android:flexbox:0.3.2'
     implementation 'com.android.support:design:26.1.0'
+    implementation files('/Users/ztt/Downloads/谷歌下载内容/umeng_sdk_android_5a9baaf2f43e480d7200010e/share/platforms/微信完整版/libs/SocialSDK_WeiXin_Full.jar')
 }
