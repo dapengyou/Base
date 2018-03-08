@@ -1,4 +1,4 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
@@ -6,6 +6,7 @@ android {
 
 
     defaultConfig {
+        applicationId "com.test.valueAnimator"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
@@ -25,21 +26,14 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.alibaba:fastjson:1.1.55.android'
-    implementation 'com.contrarywind:Android-PickerView:3.2.4'
-    compile 'com.android.support:multidex:1.0.1'
-    api 'com.android.support:recyclerview-v7:26+'
-    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
-    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
-    //没有使用特殊Header，可以不加这行
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.0'
-    api 'com.android.support:design:26.1.0'
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
 }

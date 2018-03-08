@@ -1,1 +1,1 @@
-include ':app', ':baselibrary', ':tab'
+include ':app', ':baselibrary', ':tab', ':ValueAnimator'
