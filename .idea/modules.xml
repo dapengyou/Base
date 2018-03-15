@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Base.iml" filepath="$PROJECT_DIR$/Base.iml" />
       <module fileurl="file://$PROJECT_DIR$/ValueAnimator/ValueAnimator.iml" filepath="$PROJECT_DIR$/ValueAnimator/ValueAnimator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animation/animation.iml" filepath="$PROJECT_DIR$/animation/animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/tab/tab.iml" filepath="$PROJECT_DIR$/tab/tab.iml" />
